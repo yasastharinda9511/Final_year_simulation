@@ -1,0 +1,460 @@
+version 2
+run General-0-20200528-19:43:40-9684
+attr configname General
+attr datetime 20200528-19:43:40
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Scenario
+attr processid 9684
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param Scenario.node[0].numPingApps 1
+param Scenario.node[0].pingApp[0].startTime uniform(0s,2s)
+param Scenario.node[0].pingApp[0].printPing true
+param Scenario.node[0].pingApp[0].destAddr "\"10.0.0.100\""
+param Scenario.node[0].pingApp[0].packetSize 1000B
+param Scenario.node[0].pingApp[0].sendInterval 0.3s
+param Scenario.node[*].pingApp[0].printPing true
+param Scenario.node[0].numUdpApps 1
+param Scenario.node[0].udpApp[0].typename "\"UDPBasicApp\""
+param Scenario.node[0].udpApp[0].destAddresses "\"10.0.0.100\""
+param Scenario.node[0].udpApp[0].localPort 5000
+param Scenario.node[0].udpApp[0].destPort 5000
+param Scenario.node[0].udpApp[0].messageLength 1000B
+param Scenario.node[0].udpApp[0].sendInterval 0.5s
+param Scenario.node[0].udpApp[0].packetName "\"UDPData\""
+param Scenario.node[1].numUdpApps 1
+param Scenario.node[1].udpApp[0].typename "\"UDPSink\""
+param Scenario.node[1].udpApp[0].localPort 5000
+param Scenario.node[*].wlan[0].mgmtType "\"Ieee80211MgmtAdhoc\""
+param Scenario.node[*].wlan[0].radio.transmitter.power 2mW
+param Scenario.node[*].wlan[*].opMode "\"a\""
+param Scenario.node[*].wlan[*].bitrate 6Mbps
+param Scenario.radioMedium.pathLossType "\"FreeSpacePathLoss\""
+param Scenario.node[*].ac_wlan.interfaces "\"wlan0\""
+param Scenario.node[*].ac_wlan.addressBase "\"10.0.0.0\""
+param Scenario.node[*].ac_wlan.netmask "\"255.255.0.0\""
+param Scenario.node[*].ac_wlan.mcastGroups "\"224.0.0.1\""
+param Scenario.node[*].mobilityType "\"VeinsInetMobility\""
+param Scenario.node[*].mobility.constraintAreaMinX 0m
+param Scenario.node[*].mobility.constraintAreaMinY 0m
+param Scenario.node[*].mobility.constraintAreaMinZ 0m
+param Scenario.node[*].mobility.constraintAreaMaxX 1000m
+param Scenario.node[*].mobility.constraintAreaMaxY 1000m
+param Scenario.node[*].mobility.constraintAreaMaxZ 0m
+param Scenario.manager.numVehicles 10
+param Scenario.manager.updateInterval 0.1s
+param Scenario.manager.host "\"localhost\""
+param Scenario.manager.port 9999
+param Scenario.manager.autoShutdown true
+param Scenario.manager.launchConfig "xmldoc(\"square.launchd.xml\")"
+param Scenario.manager.moduleType "\"final_year_simulation.simulations.Car2\""
+param Scenario.node[*].wlan[*].radio.displayCommunicationRange true
+param Scenario.node[*].wlan[*].radio.displayInterferenceRange true
+
+scalar Scenario.node[0].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Scenario.node[0].networkLayer.arp sentReq:count 1
+attr title "ARP request sent, count"
+scalar Scenario.node[0].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar Scenario.node[0].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar Scenario.node[0].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar Scenario.node[0].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Scenario.node[0].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Scenario.node[0].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Scenario.node[0].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Scenario.node[0].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Scenario.node[0].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.node[0].wlan[0].mac rcvdPkFromHL:count 173
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Scenario.node[0].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 163236
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Scenario.node[0].wlan[0].mac passedUpPk:count 259
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Scenario.node[0].wlan[0].mac passedUpPk:sum(packetBytes) 118428
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Scenario.node[0].wlan[0].mac rcvdPkFromLL:count 410
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Scenario.node[0].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 120542
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Scenario.node[0].wlan[0].mac sentDownPk:count 267
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Scenario.node[0].wlan[0].mac sentDownPk:sum(packetBytes) 164552
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+statistic Scenario.node[0].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic Scenario.node[0].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic Scenario.node[0].wlan[0].radio packetErrorRate:histogram
+field count 410
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	410
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Scenario.node[0].wlan[0].radio minSNIR:histogram
+field count 410
+field mean 8541.5457869277
+field stddev 17939.936301242
+field min 1021.3117165942
+field max 145769.67791577
+field sum 3502033.7726404
+field sqrsum 161545879443.86
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	183
+bin	2000	99
+bin	4000	37
+bin	6000	23
+bin	8000	8
+bin	10000	8
+bin	12000	3
+bin	14000	1
+bin	16000	3
+bin	18000	3
+bin	20000	1
+bin	22000	2
+bin	24000	0
+bin	26000	0
+bin	28000	3
+bin	30000	0
+bin	32000	1
+bin	34000	0
+bin	36000	2
+bin	38000	0
+bin	40000	0
+bin	42000	3
+bin	44000	3
+bin	46000	15
+bin	48000	1
+bin	50000	0
+bin	52000	0
+bin	54000	0
+bin	56000	2
+bin	58000	0
+bin	60000	0
+bin	62000	1
+bin	64000	0
+bin	66000	0
+bin	68000	0
+bin	70000	0
+bin	72000	2
+bin	74000	0
+bin	76000	0
+bin	78000	0
+bin	80000	0
+bin	82000	0
+bin	84000	0
+bin	86000	0
+bin	88000	0
+bin	90000	0
+bin	92000	0
+bin	94000	3
+bin	96000	0
+bin	98000	0
+bin	100000	0
+bin	102000	0
+bin	104000	0
+bin	106000	0
+bin	108000	0
+bin	110000	0
+bin	112000	0
+bin	114000	0
+bin	116000	0
+bin	118000	0
+bin	120000	0
+bin	122000	2
+bin	124000	0
+bin	126000	0
+bin	128000	0
+bin	130000	0
+bin	132000	0
+bin	134000	0
+bin	136000	0
+bin	138000	0
+bin	140000	0
+bin	142000	0
+bin	144000	1
+bin	146000	0
+bin	148000	0
+bin	150000	0
+bin	152000	0
+bin	154000	0
+bin	156000	0
+bin	158000	0
+bin	160000	0
+bin	162000	0
+bin	164000	0
+bin	166000	0
+bin	168000	0
+bin	170000	0
+bin	172000	0
+bin	174000	0
+bin	176000	0
+bin	178000	0
+bin	180000	0
+bin	182000	0
+scalar Scenario.node[0].wlan[0].radio transmissionState:count 1068
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Scenario.node[0].wlan[0].radio receptionState:count 1356
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Scenario.node[0].wlan[0].radio radioMode:count 536
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Scenario.node[0].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar Scenario.node[0].udpApp[0] "packets sent" 64
+scalar Scenario.node[0].udpApp[0] "packets received" 0
+scalar Scenario.node[0].udpApp[0] sentPk:count 64
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Scenario.node[0].udpApp[0] sentPk:sum(packetBytes) 64000
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Scenario.node[0].udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Scenario.node[0].udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Scenario.node[0].udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Scenario.node[0].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Scenario.node[0].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Scenario.node[0].udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Scenario.node[0].udp sentPk:count 63
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Scenario.node[0].udp sentPk:sum(packetBytes) 63504
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Scenario.node[0].udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Scenario.node[0].udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Scenario.node[0].pingApp[0] "Pings sent" 104
+scalar Scenario.node[0].pingApp[0] "ping loss rate (%)" 10.576923076923
+scalar Scenario.node[0].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Scenario.node[0].pingApp[0] pingRxSeq:count 93
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Scenario.node[0].pingApp[0] pingTxSeq:count 104
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Scenario.node[0].pingApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+sca
