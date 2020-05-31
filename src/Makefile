@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for Final_year_simulation
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -KINET_PROJ=../../inet -KVEINS_INET_PROJ=../../veins-veins-4.7.1/subprojects/veins_inet -KVEINS_VEINS_4_7_1_PROJ=../../veins-veins-4.7.1 -DINET_IMPORT -L$$\(INET_PROJ\)/src -L$$\(VEINS_INET_PROJ\)/src -L$$\(VEINS_VEINS_4_7_1_PROJ\)/src -lINET$$\(D\) -lveins_inet$$\(D\) -lveins$$\(D\)
+#  opp_makemake -f --deep -KINET_PROJ=C:/omnetpp-5.6/FYP/inet -KVEINS_INET_PROJ=C:/omnetpp-5.6/FYP/veins-veins-4.7.1/subprojects/veins_inet -KVEINS_VEINS_4_7_1_PROJ=C:/omnetpp-5.6/FYP/veins-veins-4.7.1 -DINET_IMPORT -L$$\(INET_PROJ\)/src -L$$\(VEINS_INET_PROJ\)/src -L$$\(VEINS_VEINS_4_7_1_PROJ\)/src -lINET$$\(D\) -lveins_inet$$\(D\) -lveins$$\(D\)
 #
 
 # Name of target to be created (-o option)
@@ -40,9 +40,9 @@ MSGFILES = \
 SMFILES =
 
 # Other makefile variables (-K)
-INET_PROJ=../../inet
-VEINS_INET_PROJ=../../veins-veins-4.7.1/subprojects/veins_inet
-VEINS_VEINS_4_7_1_PROJ=../../veins-veins-4.7.1
+INET_PROJ=C:/omnetpp-5.6/FYP/inet
+VEINS_INET_PROJ=C:/omnetpp-5.6/FYP/veins-veins-4.7.1/subprojects/veins_inet
+VEINS_VEINS_4_7_1_PROJ=C:/omnetpp-5.6/FYP/veins-veins-4.7.1
 
 #------------------------------------------------------------------------------
 
