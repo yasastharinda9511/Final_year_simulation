@@ -36,6 +36,8 @@ Here discrete data points are the raw data directly gathered from the simulation
 
 ## Comparison between our simulation results and the theoritical derivations
 
+T = Theoritical Values
+S = Simulation Values
 ![Screenshot (547)](https://user-images.githubusercontent.com/37435024/99904881-d492d600-2cf3-11eb-9e6a-ce81176e0c28.png)
 
 ![Screenshot (549)](https://user-images.githubusercontent.com/37435024/99905016-36534000-2cf4-11eb-80ab-042595244b96.png)
