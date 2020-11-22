@@ -42,4 +42,12 @@ S = Simulation Values
 
 ![Screenshot (549)](https://user-images.githubusercontent.com/37435024/99905016-36534000-2cf4-11eb-80ab-042595244b96.png)
 
+## Conclusion
+
+The curve pattern of the theoretical graph and the simulation are same but valuewise there is a bit different. The highest difference 
+occurs at the tail end of the graph. According to our point of view that error can occur due to random number generation because inside the
+computer simulations true random number generation is harder than just we thought. The overall idea that can be obtained from the
+theoretical analysis and the simulation is the same. According to our perception that deviation is somewhat tolerable. Furthermore we can
+prove that our simulation is okay.
+
 
