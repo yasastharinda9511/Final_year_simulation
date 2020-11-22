@@ -24,4 +24,12 @@ Below Figure shows how three vehicles behave inside the vehicular network.
    
 As a fist step of the Non collision probability verification, we constructed the graphs using python script.
 
+![Screenshot (542)](https://user-images.githubusercontent.com/37435024/99904402-9b0c9b80-2cf0-11eb-8409-5a9a2ec8ff4b.png)
+
+## Simulation Results
+
+First we got the data points related to 4 different convention window sizes. After gathering these data,
+we implemented a python script which is capable of drawing the curve of a 2 degree polynomial equation for each data set(Best Line).
+Here discrete data points are the raw data directly gathered from the simulation.The colored lines are the two degree polonomial curves.
+
 
