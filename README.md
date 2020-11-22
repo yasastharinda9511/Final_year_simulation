@@ -28,8 +28,14 @@ As a fist step of the Non collision probability verification, we constructed the
 
 ## Simulation Results
 
+![Screenshot (544)](https://user-images.githubusercontent.com/37435024/99904578-c17f0680-2cf1-11eb-90ba-0359d44177e9.png)
+
 First we got the data points related to 4 different convention window sizes. After gathering these data,
 we implemented a python script which is capable of drawing the curve of a 2 degree polynomial equation for each data set(Best Line).
 Here discrete data points are the raw data directly gathered from the simulation.The colored lines are the two degree polonomial curves.
+
+## Comparison between our simulation results and the theoritical derivations
+
+
 
 
