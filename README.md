@@ -18,9 +18,10 @@ Below Figure shows how three vehicles behave inside the vehicular network.
  ### Theoretical derivation
  
  The logic behind the mathematical derivation of non collision probability is, if one node is able to transmit its packet without experiencing any collision then back off slots that they have chosen randomly throughout the backoff process should be higher than the others. According to that logic the mathematical equation is like below,
-
-               
-
+    
+![Screenshot (541)](https://user-images.githubusercontent.com/37435024/99904313-20438080-2cf0-11eb-8469-c1cd444b4895.png)
+    
+   
 As a fist step of the Non collision probability verification, we constructed the graphs using python script.
 
 
